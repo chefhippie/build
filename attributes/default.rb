@@ -17,15 +17,44 @@
 # limitations under the License.
 #
 
-default["build"]["packages"] = %w(
-  autoconf
-  automake
-  flex
-  bison
-  make
-  gcc
-  gcc-c++
-  ctags
-  ncurses-devel
-  binutils
-)
+case node["platform_family"]
+when "debian"
+  default["build"]["packages"] = %w(
+    autoconf
+    automake
+    flex
+    bison
+    make
+    gcc
+    ctags
+    g++
+    build-essential
+    binutils-doc
+  )
+when "ubuntu"
+  default["build"]["packages"] = %w(
+    autoconf
+    automake
+    flex
+    bison
+    make
+    gcc
+    ctags
+    g++
+    build-essential
+    binutils-doc
+  )
+when "suse"
+  default["build"]["packages"] = %w(
+    autoconf
+    automake
+    flex
+    bison
+    make
+    gcc
+    ctags
+    gcc-c++
+    ncurses-devel
+    binutils
+  )
+end
