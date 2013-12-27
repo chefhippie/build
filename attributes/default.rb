@@ -17,9 +17,8 @@
 # limitations under the License.
 #
 
-case node["platform_family"]
-when "debian"
-  default["build"]["packages"] = %w(
+default["build"]["packages"] = value_for_platform_family(
+  "debian" => %w(
     autoconf
     automake
     flex
@@ -30,9 +29,8 @@ when "debian"
     g++
     build-essential
     binutils-doc
-  )
-when "ubuntu"
-  default["build"]["packages"] = %w(
+  ),
+  "ubuntu" => %w(
     autoconf
     automake
     flex
@@ -43,9 +41,8 @@ when "ubuntu"
     g++
     build-essential
     binutils-doc
-  )
-when "suse"
-  default["build"]["packages"] = %w(
+  ),
+  "suse" => %w(
     autoconf
     automake
     flex
@@ -57,4 +54,4 @@ when "suse"
     ncurses-devel
     binutils
   )
-end
+)
