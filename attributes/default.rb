@@ -25,7 +25,6 @@ default["build"]["packages"] = value_for_platform_family(
     bison
     make
     gcc
-    ctags
     g++
     build-essential
     binutils-doc
@@ -37,7 +36,6 @@ default["build"]["packages"] = value_for_platform_family(
     bison
     make
     gcc
-    ctags
     g++
     build-essential
     binutils-doc
@@ -49,7 +47,6 @@ default["build"]["packages"] = value_for_platform_family(
     bison
     make
     gcc
-    ctags
     gcc-c++
     ncurses-devel
     binutils
