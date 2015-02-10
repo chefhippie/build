@@ -29,17 +29,6 @@ default["build"]["packages"] = value_for_platform_family(
     build-essential
     binutils-doc
   ),
-  "ubuntu" => %w(
-    autoconf
-    automake
-    flex
-    bison
-    make
-    gcc
-    g++
-    build-essential
-    binutils-doc
-  ),
   "suse" => %w(
     autoconf
     automake
